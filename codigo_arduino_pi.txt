@@ -1,0 +1,70 @@
+#include <ESP8266WiFi.h>
+#include <Adafruit_Sensor.h>
+#include <DHT.h>
+
+
+#define DHTPIN 2    // Pino ao qual o DHT11 está conectado no ESP8266 NodeMCU (corresponde ao GPIO2)
+#define DHTTYPE DHT11
+#define RAIN_SENSOR_PIN 0 // Pino ao qual o sensor de chuva está conectado no ESP8266 NodeMCU (corresponde ao GPIO0)
+
+DHT dht(DHTPIN, DHTTYPE);
+
+const char* ssid = "Galaxy A73 5GFD01"; // Nome da sua rede Wi-Fi
+const char* password = "hixd4094"; // Senha da sua rede Wi-Fi
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+  pinMode(LED_BUILTIN, OUTPUT);  // Configura o pino do LED embutido como saída
+  pinMode(RAIN_SENSOR_PIN, INPUT);  // Configura o pino do sensor de chuva como entrada
+
+  // Conecta-se à rede Wi-Fi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Conectando ao Wi-Fi...");
+  }
+  Serial.println("Conectado ao Wi-Fi!");
+}
+
+void loop() {
+  delay(2000); // Atraso para estabilização dos sensores
+
+  // Leitura da umidade e temperatura
+  float humidity = dht.readHumidity();
+  float temperature = dht.readTemperature();
+  String state = "";
+
+  // Leitura do sensor de chuva
+  int rainSensorValue = digitalRead(RAIN_SENSOR_PIN);
+
+  Serial.println(" ");
+
+  // Verifica a intensidade da chuva
+  if (rainSensorValue == HIGH) {
+    state = "Chovendo";
+  } else {
+    state = "Sem chuva ou chuva de baixa intensidade";
+  }
+
+  // Exibe temperatura e umidade
+  if (!isnan(temperature) && !isnan(humidity)) {
+    //Serial.printf("\n%.1f,%.1f,%s", temperature, humidity, state);
+    Serial.print(temperature);
+    Serial.print(",");
+    Serial.print(humidity);
+    Serial.print(",");
+    Serial.print(state);
+    
+    
+    
+    
+  } else {
+    //Serial.println("Falha na leitura do sensor DHT");
+  }
+
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(5000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(5000);
+}
