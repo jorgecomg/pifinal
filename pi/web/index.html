@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Estação Metereológica</h1>
+    </header>
+    <div id = "background">
+    <nav>
+        <ul>
+            <li><a href = "index.html">Cadastro</a></li>
+            <li><a href = "produtos.jsp">Registros</a></li>
+            <li><a href = "excluirprod.html">Excluir Registro</a></li>
+            <li><a href = "alterar.html">Alterar Registro</a></li>
+            <li><a href="excel.jsp">Cadastrar via Excel</a></li>
+
+        </ul>
+    </nav>
+        
+    <main>
+        <img src = "https://wallpapercave.com/wp/Z4CD0Ic.jpg" id = "fundo">
+        <form method="post" action="salvar.jsp">
+        <h2>horario:</h2>
+        <input type = "text" id = "horario" name = "horario">
+        <h2>temperatura:</h2>
+        <input type = "text" id = "temperatura" name = "temperatura">
+        <h2>umidade:</h2>
+        <input type = "number" id = "umidade" name = "umidade">
+        <h2>estado:</h2>
+        <input type = "text" id = "estado" name = "estado">
+        <p><input type="submit" value = "Cadastrar" id = "submitButton">
+    </form>  
+    </main>
+     </div>
+
+</body>
+</html>

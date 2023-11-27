@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alterar Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+       <header>
+        <h1>Estação Metereológica</h1>
+        <nav>
+        <ul>
+            <!--<li><a href = "index.html">Cadastro</a></li>-->
+            <li><a href = "produtos.jsp">Registros</a></li>
+            <li><a href = "excluirprod.html">Excluir Registro</a></li>
+            <li><a href = "alterar.html">Alterar Registro</a></li>
+            <li><a href="excel.jsp">Cadastrar via Excel</a></li>
+        </ul>
+    </nav>
+    </header>
+   
+    
+    <main>
+            
+       
+        <form method="get" action="alterar.jsp">
+            <h2>Código a alterar: </h2>
+            <input id="cod" type="number" name="codigo" required>
+            <p><input type="submit" value="Buscar"></p>
+        </form>
+        </main>
+    
+    </body>
+</html>

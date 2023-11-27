@@ -1,0 +1,190 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color:#f5f7f5;
+}
+header {
+    width: 100%;
+    background-color: #153b16;
+    padding: 10px;
+    color: white;
+}
+nav{
+    
+    font-family: sans-serif;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    float: right;
+    margin-top: 10px;
+    background-color: green;
+    width: 100%;
+}
+nav li{
+    display: inline-block;
+}
+nav li a{
+    display: inline-block;
+    color: #edf5e6;
+    text-decoration: none;
+    padding: 10px;
+}
+nav li a:hover{
+    background-color: #edf5e6;
+    color:#153b16;
+    border-radius: 0.3em 0.3em;
+}
+.dropdown-menu{
+    position: absolute;
+    color:#153b16;
+    background-color: #bdd6a7;
+    box-shadow: 2px 2px 5px rgba(20, 20, 20, 0.3);
+    border-radius: 0.3em 0.3em;
+    display: none;
+}
+.dropdown-menu a{
+    display: block;
+    color: #153b16;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+img{
+    vertical-align: middle;
+    border-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    height: 9%;
+    width: 9%
+}
+
+footer{
+    width: 100%;
+    padding: 40px 40px;
+    font-size: 1em;
+    background-color:#153b16;
+    text-align: center;
+}
+
+main{
+    /* Definir altura da pagina*/
+    width: 90%;
+    /* Definir a posição que a pagina vai ocupar da pagina*/
+    height: 1000%;
+    padding: 10px;
+    /* Defini a cor de fundo da pagina*/
+    background-color:#f5f7f5;
+    display:flex
+}
+
+#conteudo-left, #conteudo-right{
+    flex: 50%;
+    border-radius: 0.3em 0.3em;
+    margin:5px;
+    padding: 10px;
+}
+
+#conteudo-left{
+    background-color: #f5f7f5;
+}
+
+#conteudo-right{
+    background-color: #e1e6e1;
+    box-shadow: 10px 10px 15px rgba(20, 20, 20, 0.3);
+    border: solid #c0c0c0 1px
+}
+#conteudo-center{
+    background-color: #e1e6e1;
+    box-shadow: 10px 10px 15px rgba(20, 20, 20, 0.3);
+    border: solid #c0c0c0 1px;
+    border-radius: 0.3em 0.3em;
+    margin:5px;
+    padding: 10px;
+    text-align: center;
+}
+main input{
+    background-color: #e1e6e1;
+    display: table-column-group;
+}
+.mensagem{
+
+    background-color: #e0f7dc;
+    box-shadow: 10px 10px 15px rgba(20, 20, 20, 0.3);
+    border: solid #c0c0c0 1px;
+    border-radius: 0.3em 0.3em;
+    margin:50px;
+    padding: 25px;
+    width: 600px
+}
+
+    input {
+    width: 300px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid;
+    height: 22px;
+    padding-left: 7px;
+}
+
+textarea {
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid;
+    height: 22px;
+    padding-left: 7px;
+}
+
+#desc {
+    width: 300px;
+    height: 180px;
+}
+
+button {
+    
+    height: 40px;
+    width: 120px;
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    color: white;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 7px;
+    background-color: #0f6bff; 
+}
+
+table {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border:2px solid #302f2f;
+    border-collapse:collapse;
+    
+}
+table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #f0f0f0;
+    color: #313030;
+}
+table td {
+    border:1px solid #b3adad;
+    text-align:center;
+    padding:5px;
+    background: #ffffff;
+    color: #313030;
+}
+
+ 
+
+
+
