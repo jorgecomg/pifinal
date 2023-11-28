@@ -9,7 +9,7 @@
         <title>Excluir produtos</title>
         <script>
             function redirectAfterDelay() {
-                window.location.href = "produtos.jsp";
+                window.location.href = "index.jsp";
             }
         </script>
     </head>
@@ -21,7 +21,7 @@
             try {
                 //Conecta ao banco de dados chamado banco
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "008073");
+                Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "56150122");
                 // Excluem o produto de código informado
                 PreparedStatement st = conecta.prepareStatement("DELETE FROM estacao WHERE id=?");
                 st.setInt(1, cod);

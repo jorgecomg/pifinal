@@ -22,7 +22,7 @@
         <nav>
         <ul>
             <!--<li><a href = "index.html">Cadastro</a></li>-->
-            <li><a href = "produtos.jsp">Registros</a></li>
+            <li><a href = "index.jsp">Registros</a></li>
             <li><a href = "excluirprod.html">Excluir Registro</a></li>
             <li><a href = "alterar.html">Alterar Registro</a></li>
             <li><a href="excel.jsp">Cadastrar via Excel</a></li>
@@ -43,7 +43,7 @@
             try {
                 //Conecta ao banco de dados chamado banco
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "008073");
+                Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "56150122");
                 // Excluem o produto de código informado
                 PreparedStatement st = conecta.prepareStatement("SELECT * FROM estacao WHERE id=?");
                 st.setInt(1, cod);
@@ -60,7 +60,7 @@
         <h2>temperatura:</h2>
         <input type = "text" id = "temperatura" name = "temperatura" value="<%= rs.getString("temperatura")%>">
         <h2>umidade:</h2>
-        <input type = "text" id = "temperatura" name = "temperatura" value="<%= rs.getString("umidade")%>">
+        <input type = "text" id = "umidade" name = "umidade" value="<%= rs.getString("umidade")%>">
         <h2>estado:</h2>
         <input type = "text" id = "estado" name = "estado" value="<%= rs.getString("estado")%>">
         <p><input type="submit" value = "Alterar" id = "submitButton">

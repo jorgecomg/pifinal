@@ -10,6 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cadastro via Excel</title>
+        <script>
+            function redirectAfterDelay() {
+                window.location.href = "index.jsp";
+            }
+        </script>
     </head>
     <body>
         <%
@@ -18,7 +23,7 @@
             try {
                 //Conecta ao banco de dados chamado banco
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "008073");
+                Connection conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "56150122");
                 //Ler o arquivo Excel
                 FileReader arquivo = new FileReader("C:/csv/testecsv.csv");
                 BufferedReader br = new BufferedReader(arquivo);
@@ -49,6 +54,7 @@
             } catch (Exception erro) {
                 out.print("Entre em contato com o suporte e informe o erro: " + erro.getMessage());
             }
+            out.println("<script>setTimeout(redirectAfterDelay, 2000);</script>");
         %>    
     </body>
 </html>

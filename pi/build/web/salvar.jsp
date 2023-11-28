@@ -34,7 +34,7 @@
             Connection conecta;
             PreparedStatement st;
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "008073");
+            conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "56150122");
             st = conecta.prepareStatement("insert into estacao (horario,temperatura,estado,umidade) values(?,?,?,?)");
             st.setString(1, horario);
             st.setString(2, temperatura);
